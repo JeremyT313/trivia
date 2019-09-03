@@ -1,0 +1,36 @@
+<form #userForm="ngForm" (ngSubmit)="addScore(userForm)">
+  <label for="username">Name:</label>
+  <input type="text" name="username" id="username" placeholder="Name" ngModel />
+  <div *ngFor="let question of questions; index as i">
+    <p class="question">{{ question.question_name }}</p>
+    <input
+      type="radio"
+      class="choice"
+      name="{{ i }}"
+      value="{{ question.choice_1 }}"
+      ngModel
+    />{{ question.choice_1 }}
+    <input
+      type="radio"
+      class="choice"
+      name="{{ i }}"
+      value="{{ question.choice_2 }}"
+      ngModel
+    />{{ question.choice_2 }}
+    <input
+      type="radio"
+      class="choice"
+      name="{{ i }}"
+      value="{{ question.choice_3 }}"
+      ngModel
+    />{{ question.choice_3 }}
+    <input
+      type="radio"
+      class="choice"
+      name="{{ i }}"
+      value="{{ question.choice_4 }}"
+      ngModel
+    />{{ question.choice_4 }}
+  </div>
+  <button>Submit Answers</button>
+</form>

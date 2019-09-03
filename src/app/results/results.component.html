@@ -1,0 +1,7 @@
+<!-- <div>
+  <p>{{ user.username }}: {{ user.score }}</p>
+</div> -->
+<div *ngFor="let question of questions; index as i">
+  <p>{{ i }}. Question: {{ question }}</p>
+  <p>Correct Asnwer: {{ question }}</p>
+</div>

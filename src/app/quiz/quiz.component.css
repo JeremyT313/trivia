@@ -1,0 +1,13 @@
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.choice {
+  display: flex;
+}
